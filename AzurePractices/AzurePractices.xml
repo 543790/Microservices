@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AzurePractices</name>
+    </assembly>
+    <members>
+        <member name="T:AzurePractices.Controllers.ValuesController">
+            <summary>
+            The rest client
+            </summary>
+        </member>
+        <member name="M:AzurePractices.IHttpClient.GetStringAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the string asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.IHttpClient.PostAsync``1(System.String,``0,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Posts the asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="uri">The URI.</param>
+            <param name="item">The item.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.IHttpClient.DeleteAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Deletes the asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.IHttpClient.PutAsync``1(System.String,``0,System.String,System.String,System.String)">
+            <summary>
+            Puts the asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="uri">The URI.</param>
+            <param name="item">The item.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.IHttpClient.PostAsync(System.String,System.Net.Http.MultipartFormDataContent,System.Int32,System.String)">
+            <summary>
+            Posts the asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="RequestData">The request data.</param>
+            <param name="serviceTimeOut">The service time out.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.IHttpClient.GetStreamAsync(System.String,System.String)">
+            <summary>
+            Gets the asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="headerString">The header string.</param>
+            <returns></returns>
+        </member>
+        <member name="F:AzurePractices.StandardHttpClient._client">
+            <summary>
+            The client
+            </summary>
+        </member>
+        <member name="F:AzurePractices.StandardHttpClient._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="F:AzurePractices.StandardHttpClient._httpContextAccessor">
+            <summary>
+            The HTTP context accessor
+            </summary>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.#ctor(Microsoft.Extensions.Logging.ILogger{AzurePractices.StandardHttpClient},Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:AzurePractices.StandardHttpClient" /> class.
+            </summary>
+            <param name="logger">The logger.</param>
+            <param name="httpContextAccessor">The HTTP context accessor.</param>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.GetStringAsync(System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the string asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.DoPostPutAsync``1(System.Net.Http.HttpMethod,System.String,``0,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Does the post put asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="method">The method.</param>
+            <param name="uri">The URI.</param>
+            <param name="item">The item.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException">Value must be either post or put. - method</exception>
+            <exception cref="T:System.Net.Http.HttpRequestException"></exception>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.PostAsync``1(System.String,``0,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String},Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            Posts the asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="uri">The URI.</param>
+            <param name="item">The item.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.PutAsync``1(System.String,``0,System.String,System.String,System.String)">
+            <summary>
+            Puts the asynchronous.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="uri">The URI.</param>
+            <param name="item">The item.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.DeleteAsync(System.String,System.String,System.String,System.String)">
+            <summary>
+            Deletes the asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="authorizationToken">The authorization token.</param>
+            <param name="requestId">The request identifier.</param>
+            <param name="authorizationMethod">The authorization method.</param>
+            <returns></returns>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.SetAuthorizationHeader(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Sets the authorization header.
+            </summary>
+            <param name="requestMessage">The request message.</param>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.PostAsync(System.String,System.Net.Http.MultipartFormDataContent,System.Int32,System.String)">
+            <summary>
+            Posts the asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="RequestData">The request data.</param>
+            <param name="serviceTimeOut">The service time out.</param>
+            <returns></returns>
+            <exception cref="T:System.Net.Http.HttpRequestException"></exception>
+        </member>
+        <member name="M:AzurePractices.StandardHttpClient.GetStreamAsync(System.String,System.String)">
+            <summary>
+            Gets the asynchronous.
+            </summary>
+            <param name="uri">The URI.</param>
+            <param name="headerString">The header string.</param>
+            <returns></returns>
+            TODO: Need to refactor GetStringAsync Method to return HttpResponseMessage
+        </member>
+    </members>
+</doc>
